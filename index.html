@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      id="bootstrap-css"
+      href="https://livecpy4cart20.wpengine.com/wp-content/themes/klnyc/css/bootstrap.min.css?ver=5.8.6"
+      type="text/css"
+      media=""
+    />
+
+    <style>
+      .summary_priority_edit_btn {
+        font-weight: 600;
+        color: #666;
+        font-size: 16px;
+        margin: 20% 50%;
+        padding: 5px 10px;
+        color: blue;
+        background-color: azure;
+        display: block;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .addSize_popup .modal-content {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 0.3rem;
+        outline: 0;
+        max-width: 400px;
+        padding: 2px 20px;
+      }
+
+      .addSize_popup .justify-content-between {
+        display: flex;
+        -ms-flex-pack: justify !important;
+        justify-content: space-between !important;
+      }
+
+      .addSize_popup .tabs {
+        margin: 2px 5px 0px 5px;
+        padding-bottom: 10px;
+        cursor: pointer;
+        padding-left: 10px;
+      }
+      .addSize_popup .tabs:hover h6,
+      .tabs.active h6 {
+        border-bottom: 2px solid #000;
+      }
+
+      .addSize_popup .tabs h6 {
+        font-size: 16px !important;
+        font-weight: bold;
+        text-align: left;
+        float: left;
+        padding-bottom: 10px;
+      }
+
+      .addSize_popup .modal-backdrop {
+        background-color: #64b5f6;
+      }
+
+      .addSize_popup fieldset {
+        display: none;
+      }
+
+      .addSize_popup fieldset.show {
+        display: block;
+      }
+
+      .addSize_popup select:focus,
+      .addSize_popup input:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        border: 1px solid #2196f3 !important;
+        outline-width: 0 !important;
+        font-weight: 400;
+      }
+
+      .addSize_popup button:focus {
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        outline-width: 0;
+      }
+
+      .addSize_popup .tabs {
+        margin: 2px 5px 0px 5px;
+        padding-bottom: 10px;
+        cursor: pointer;
+      }
+
+      .addSize_popup .box {
+        margin-bottom: 10px;
+        border-radius: 5px;
+        padding: 10px;
+      }
+
+      .addSize_popup .modal-backdrop {
+        background-color: #64b5f6;
+      }
+
+      .addSize_popup .line {
+        background-color: #cfd8dc;
+        height: 1px;
+        width: 100%;
+      }
+      .addSize_popup .modal-header {
+        border: 0px;
+      }
+      .addsize_priority_list {
+        margin-left: 0;
+        padding-left: 0;
+      }
+
+      .addsize_priority_list li {
+        list-style: none;
+        padding: 8px 15px;
+        margin: 0px;
+        letter-spacing: 1px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .addsize_priority_list li span {
+        color: green;
+      }
+
+      .addsize_priority_list li:hover {
+        background-color: #1d305e;
+        color: #fff;
+      }
+
+      .addsize_msf_btn {
+        padding: 10px;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center addSize_popup">
+        <button
+          class="summary_priority_edit_btn btn btn-primary py-2 px-4"
+          data-toggle="modal"
+          data-target="#myModal"
+        >
+          Edit
+        </button>
+
+        <!-- Modal-->
+        <div
+          id="myModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+          class="modal fade text-left"
+        >
+          <div role="document" class="modal-dialog">
+            <div class="modal-content">
+              <div
+                class="modal-header d-flex justify-content-between mx-1 mx-sm-3 mb-0 pb-0 border-0"
+              >
+                <div class="tabs active" id="tab01">
+                  <h6 class="text-muted">PRIORITY</h6>
+                </div>
+                <div class="tabs" id="tab02">
+                  <h6 class="font-weight-bold">NEED BY DATE</h6>
+                </div>
+              </div>
+
+              <div class="modal-body p-15">
+                <fieldset class="show" id="tab011">
+                  <div class="bg-light">
+                    <ul class="addsize_priority_list">
+                      <li>Regular - No Hurry</li>
+                      <li>Regular - Priority</li>
+                      <li>Rush <span>$</span></li>
+                      <li>Extra Rush <span>$</span></li>
+                      <li>Super Rush <span>$</span></li>
+                    </ul>
+                  </div>
+                </fieldset>
+                <fieldset id="tab021">
+                  <div class="bg-light">
+                    <h5 class="text-center mb-4 mt-0 pt-4">Knowledge Center</h5>
+                  </div>
+                </fieldset>
+
+                <div class="addsize_msf_btn">
+                  <div class="bg-light">
+                    <a href="#"> Manage Schedules & Fees >></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://livecpy4cart20.wpengine.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0"
+      id="jquery-core-js"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://livecpy4cart20.wpengine.com/wp-content/themes/klnyc/js/bootstrap.min.js?ver=5.8.6"
+      id="bootstrap-js"
+    ></script>
+
+    <!-- <script>
+      jQuery(document).ready(function ($) {
+        $(".tabs").click(function () {
+          $(".tabs").removeClass("active");
+          $(".tabs h6").removeClass("font-weight-bold");
+          $(".tabs h6").addClass("text-muted");
+          $(this).children("h6").removeClass("text-muted");
+          $(this).children("h6").addClass("font-weight-bold");
+          $(this).addClass("active");
+
+          current_fs = $(".active");
+
+          next_fs = $(this).attr("id");
+          next_fs = "#" + next_fs + "1";
+
+          $("fieldset").removeClass("show");
+          $(next_fs).addClass("show");
+
+          current_fs.animate(
+            {},
+            {
+              step: function () {
+                current_fs.css({
+                  display: "none",
+                  position: "relative",
+                });
+                next_fs.css({
+                  display: "block",
+                });
+              },
+            }
+          );
+        });
+      });
+    </script> -->
+  </body>
+</html>
